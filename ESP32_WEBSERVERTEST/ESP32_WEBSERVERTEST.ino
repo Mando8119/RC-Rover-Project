@@ -31,6 +31,6 @@ void loop() {
 
 // Handler for the root path
 void handleRoot() {
-  server.send(200, "text/plain", "Hello from ESP32!");
+  server.send(200, "text/plain", "Hello from ESP32!]"); // Connect to server via local ip: 192.168.4.1
 }
 
