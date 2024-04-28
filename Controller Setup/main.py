@@ -10,10 +10,16 @@ def logic(controller):
 
     BTN_X = controller.x_pressed
     BTN_B = controller.b_pressed
+    BTN_Y = controller.y_pressed
+    BTN_A = controller.a_pressed
+    BTN_SELECT = controller.select_pressed
     BTN_START = controller.start_pressed
 
     Left_Bumper = controller.btn_tl
     Right_Bumper = controller.btn_tr
+
+    Left_Trigger = controller.left_trigger
+    Right_Trigger = controller.right_trigger
 
 
     horizontal = x[0]
@@ -27,7 +33,8 @@ def logic(controller):
     vertical = round((vertical + 1) * 90)
 
     # Create and send packet
-    packet = " ".join([str(horizontal), str(vertical), str(BTN_X), str(BTN_B), str(Left_Bumper), str(Right_Bumper), str(BTN_START)])
+    packet = " ".join([str(horizontal), str(vertical), str(Left_Trigger), str(Right_Trigger), str(Left_Bumper), str(Right_Bumper), str(BTN_X), str(BTN_B),
+                       str(BTN_Y), str(BTN_A), str(BTN_SELECT), str(BTN_START)])
     return packet
      
 while True:
