@@ -19,9 +19,15 @@ def logic(controller):
     Left_Bumper = controller.btn_tl
     Right_Bumper = controller.btn_tr
 
-    Left_Trigger = controller.left_trigger
-    Right_Trigger = controller.right_trigger
+    Speed_Decrease = controller.left_trigger
+    Speed_Increase = controller.right_trigger
 
+    Speed_Decrease = round( - (Speed_Decrease / 2.55) *5)
+    Speed_Increase = round((Speed_Increase / 2.55) * 5)
+
+    Neutral_Speed = 1500
+
+    Speed = Speed_Decrease + Neutral_Speed + Speed_Increase
 
     left_horizontal = left_joystick[0]
     right_vertical = right_joystick[1]
@@ -34,8 +40,7 @@ def logic(controller):
     right_vertical = round((right_vertical + 1) * 90)
 
     # Create and send packet
-    packet = " ".join([str(left_horizontal), str(right_vertical), str(Left_Trigger), str(Right_Trigger), str(Left_Bumper), str(Right_Bumper), str(BTN_X), str(BTN_B),
-                       str(BTN_Y), str(BTN_A), str(BTN_SELECT), str(BTN_START)])
+    packet = " ".join([str(left_horizontal), str(Speed)])
     return packet
 
 def send_packet(packet):
