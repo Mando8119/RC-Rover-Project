@@ -70,11 +70,11 @@ class controller:
                     case "BTN_TR":
                         self.btn_tr = ('1' if event.state == 1 else '0')
                         break
-                    case "ABS_RZ":
-                        self.right_trigger = event.state
+                    case "ABS_RZ": #triggers originally go from 0 -> 255 but now they go from 0 -> 100
+                        self.right_trigger = round(event.state / 2.55)
                         break
                     case "ABS_Z":
-                        self.left_trigger = event.state
+                        self.left_trigger = round(event.state / 2.55)
                         break
                     case "SYN_REPORT": 
                         #print(str(event.code) + ": " + str(event.state))

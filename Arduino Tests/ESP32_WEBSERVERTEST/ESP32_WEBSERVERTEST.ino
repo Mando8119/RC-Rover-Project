@@ -1,36 +1,32 @@
 #include <WiFi.h>
 #include <WebServer.h>
 
-// Replace with your desired credentials
 const char* ssid = "RC-Rover Radio";
 const char* password = "123456789";
 
-WebServer server(80);  // Object to handle HTTP requests
+WebServer server(80);
+
+void handleRoot() {
+  if (server.method() == HTTP_POST) {
+    String message = server.arg("plain");
+    Serial.println("Received: " + message);
+    server.send(200, "text/plain", "Received: " + message);
+  } else {
+    server.send(404, "text/plain", "Only POST supported");
+  }
+}
 
 void setup() {
   Serial.begin(115200);
-
-  // Set up the ESP32 as an access point
   WiFi.softAP(ssid, password);
-  Serial.println("Access Point Started");
-
-  // Print the IP address of the ESP32
-  IPAddress IP = WiFi.softAPIP();
   Serial.print("AP IP address: ");
-  Serial.println(IP);
+  Serial.println(WiFi.softAPIP());
 
-  // Define web server routes
-  server.on("/", handleRoot);      // Call handleRoot when a client requests URI "/"
-  server.begin();                  // Start the server
+  server.on("/", handleRoot);
+  server.begin();
   Serial.println("HTTP server started");
 }
 
 void loop() {
-  server.handleClient();           // Handle client requests
+  server.handleClient();
 }
-
-// Handler for the root path
-void handleRoot() {
-  server.send(200, "text/plain", "Hello from ESP32!]"); // Connect to server via local ip: 192.168.4.1
-}
-
