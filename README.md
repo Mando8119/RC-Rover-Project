@@ -4,7 +4,7 @@ into a fully self-driving rover and am planning on also making the arm fully aut
 
 
 # TODO
-[x] introduce functionality to the triggers for the controller
+[✅] introduce functionality to the triggers for the controller
 [x] decide on how to stream packet to the arduino 
     (Potentially through SERIAL via network connection?!)
 [x] initialize first test
