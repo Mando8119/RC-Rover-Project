@@ -1,0 +1,8 @@
+{
+    "port": "COM11",
+    "configuration": "PartitionScheme=default,PinNumbers=default,USBMode=default",
+    "board": "arduino:esp32:nano_nora",
+    "programmer": "esptool",
+    "sketch": "Arduino Tests\\RC_Control_Test1\\RC_Control_Test1.ino",
+    "output": "./temp"
+}
