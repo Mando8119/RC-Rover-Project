@@ -21,18 +21,34 @@ void handleRoot() {
     Serial.print(", Speed: ");
     Serial.println(speed);
     server.send(200, "text/plain", "Received: " + message);
-  } else {
-    server.send(404, "text/plain", "Only POST supported");
+  } else if (server.method() == HTTP_GET) {
+    server.send(200, "text/html", displayValues());
   }
 }
 
-void displayValues() {
+String displayValues() {
   String html = "<!DOCTYPE html><html><head><title>RC Rover Status</title></head><body>";
   html += "<h1>RC Rover Control Values</h1>";
-  html += "<p>Steer Value: " + String(steer_value) + "</p>";
-  html += "<p>Speed: " + String(speed) + "</p>";
+  html += "<p id='steer'>Steer Value: " + String(steer_value) + "</p>";
+  html += "<p id='speed'>Speed: " + String(speed) + "</p>";
+  html += "<script>";
+  html += "setInterval(function() {";
+  html += "fetch('/data').then(response => response.json()).then(data => {";
+  html += "document.getElementById('steer').textContent = 'Steer Value: ' + data.steer;";
+  html += "document.getElementById('speed').textContent = 'Speed: ' + data.speed;";
+  html += "});";
+  html += "}, 250);"; // Update every quarter-second
+  html += "</script>";
   html += "</body></html>";
-  server.send(200, "text/html", html);
+  return html;
+}
+
+void handleData() {
+  String json = "{";
+  json += "\"steer\":"; json += steer_value; json += ",";
+  json += "\"speed\":"; json += speed;
+  json += "}";
+  server.send(200, "application/json", json);
 }
 
 void setup() {
@@ -43,6 +59,7 @@ void setup() {
 
   server.on("/", handleRoot);
   server.on("/status", displayValues);
+  server.on("/data", handleData);
   server.begin();
   Serial.println("HTTP server started");
 
