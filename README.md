@@ -4,7 +4,11 @@ into a fully self-driving rover and am planning on also making the arm fully aut
 
 
 # TODO
+[X] Test new Smart Dashboard
+[X] Test drive motor (Scary! | Motor go burr)
+
+# Finished Items
 [✅] introduce functionality to the triggers for the controller
-[x] decide on how to stream packet to the arduino 
+[✅] decide on how to stream the packet to the Arduino (Sent through network from LT to         ESP32)
     (Potentially through SERIAL via network connection?!)
-[x] initialize first test
+[✅] initialize first test (Working steer servo with rc control)
