@@ -9,6 +9,6 @@ into a fully self-driving rover and am planning on also making the arm fully aut
 
 # Finished Items
 [✅] introduce functionality to the triggers for the controller
-[✅] decide on how to stream the packet to the Arduino (Sent through network from LT to         ESP32)
+[✅] decide on how to stream the packet to the Arduino (Sent through network from LT to ESP32)
     (Potentially through SERIAL via network connection?!)
 [✅] initialize first test (Working steer servo with rc control)
