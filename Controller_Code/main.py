@@ -46,7 +46,7 @@ def logic(controller):
         right_vertical = 0
 
     # Convert joystick positions to servo displacements
-    left_horizontal = round(93 + ((left_horizontal) * 25))
+    left_horizontal = round(118 - ((left_horizontal + 1) * 25))
     right_vertical = round((right_vertical + 1) * 90)
 
     # Create and return the packet
@@ -63,6 +63,7 @@ def send_packet(packet):
 
 while True:
     packet = logic(operator_controller)  # Get the packet based on the controller input
-    send_packet(packet)  # Send the packet to the ESP32
+    send_packet(packet) #Send the packet to the ESP32 (Comment line out if you want
+                        #to test the packet without sending it to the ESP32)
     print(packet)  # Print the packet
     time.sleep(0.1)  # Delay for 0.1 seconds

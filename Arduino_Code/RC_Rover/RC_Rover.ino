@@ -18,8 +18,10 @@ void handleRoot() {
     sscanf(message.c_str(), "%d %d", &steer_value, &speed);
     Serial.print("Received - Steer: ");
     Serial.print(steer_value);
+    steer_servo.write(steer_value);
     Serial.print(", Speed: ");
     Serial.println(speed);
+    drive_esc.writeMicroseconds(speed);
     server.send(200, "text/plain", "Received: " + message);
   } else if (server.method() == HTTP_GET) {
     server.send(200, "text/html", displayValues());
@@ -64,7 +66,7 @@ void setup() {
   Serial.println("HTTP server started");
 
   steer_servo.attach(4);
-  drive_esc.attach(5);
+  drive_esc.attach(6);
   steer_servo.write(steer_value);
   drive_esc.writeMicroseconds(speed);
 }

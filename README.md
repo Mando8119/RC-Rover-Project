@@ -8,13 +8,22 @@ This is a repository for my personal RC Rover Project. I am converting a Traxxas
 - Laptop with capabilities to run Python and Arduino (C++) Code
 
 ## TODO
-- [X] Test drive motor (Scary! | Motor go burr)
-- [X] Figure out how to power both the ESP32 and Drive_Servo
-- [X] Source Servos for the project
+- [ ] Source Servos for Arm (also figure out how many pivot points we want)
+- [ ] Order lower MAH batteries for slower drive speeds.
+- [ ] Figure out how to power Servos
+- [ ] 3d model Arm
+- [ ] Learn inverse kinematics for [?] degree of freedom arm
+- [ ] Create PCB design
+- [ ] 3d model mounting plate for electronics and Arm
+- [ ] Name our Rover!
+- [ ] Create branches to begin testing autonomous driving and arm movement
 
 ## Finished Tasks
-- [✅] Introduce functionality to the triggers for the controller
-- [✅] Decide on how to stream the packet to the Arduino (Sent through network from LT to ESP32) (Potentially through SERIAL via network connection?!)
-- [✅] Initialize first test (Working steer servo with rc control)
-- [✅] Clean up repository (big mess)
-- [✅] Test new Smart Dashboard
+- [x] Introduce functionality to the triggers for the controller
+- [x] Decide on how to stream the packet to the Arduino (Sent through network from LT to ESP32) (Potentially through SERIAL via network connection?!)
+- [x] Initialize first test (Working steer servo with rc control)
+- [x] Clean up repository (big mess)
+- [x] Test new Smart Dashboard
+- [x] Test drive motor (Scary! | Motor go burr)
+- [x] Figure out how to power both the ESP32 and Drive_Servo
+- [x] Source Servos for the project
