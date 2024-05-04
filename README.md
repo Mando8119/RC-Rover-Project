@@ -2,7 +2,9 @@
 
 This is a repository for my personal RC Rover Project. I am converting a Traxxas Bandit VXL into a fully self-driving rover and planning to make the arm fully autonomous.
 
-![Rover Gif](https://media.giphy.com/media/2yzgQzwGmAZ8s7RVkp/giphy.gif?cid=ecf05e47dtyxllc53014pv8zd1978b3vupmnt8mvmwabhiu7&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+<p align="center">
+  <img src="https://media.giphy.com/media/2yzgQzwGmAZ8s7RVkp/giphy.gif?cid=ecf05e47dtyxllc53014pv8zd1978b3vupmnt8mvmwabhiu7&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Rover Gif">
+</p>
 
 ## Project Items
 - Traxxas Bandit VXL
