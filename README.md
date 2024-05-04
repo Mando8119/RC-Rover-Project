@@ -7,7 +7,24 @@ This is a repository for my personal RC Rover Project. I am converting a Traxxas
 - Arduino Nano ESP32
 - Laptop with capabilities to run Python and Arduino (C++) Code
 
+## Developer Notes
+- ESC | Electronic Speed Controller
+    - Write 1000 Microseconds to move full speed backwards
+    - Write 1500 Microseconds to stop movement (Neutral Position)
+    - Write 2000 Microseconds to move full speed forwards
+- Steer Servo
+    - 68 Degrees is fully to the right
+    - 93 Degrees is fully forward
+    - 118 Degrees is fully to the left
+- Power
+    - ESC currently routes power to:
+        - Drive Motor
+        - Arduino Nano ESC32
+        - Drive Servo
+        - // See if we can power more servos on this, would be very helpful \\
+
 ## TODO
+- [ ] Code better visuals for the webserver
 - [ ] Source Servos for Arm (also figure out how many pivot points we want)
 - [ ] Order lower MAH batteries for slower drive speeds.
 - [ ] Figure out how to power Servos
