@@ -21,7 +21,7 @@ This is a repository for my personal RC Rover Project. I am converting a Traxxas
         - Drive Motor
         - Arduino Nano ESC32
         - Drive Servo
-        - // See if we can power more servos on this, would be very helpful \\
+        - See if we can power more servos on this, would be very helpful
 
 ## TODO
 - [ ] Code better visuals for the webserver
