@@ -2,31 +2,29 @@
 
 This is a repository for my personal RC Rover Project. I am converting a Traxxas Bandit VXL into a fully self-driving rover and planning to make the arm fully autonomous.
 
-<p align="center">
-  <img src="https://media.giphy.com/media/2yzgQzwGmAZ8s7RVkp/giphy.gif?cid=ecf05e47dtyxllc53014pv8zd1978b3vupmnt8mvmwabhiu7&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Rover Gif">
-</p>
+![Rover Gif](https://media.giphy.com/media/2yzgQzwGmAZ8s7RVkp/giphy.gif?cid=ecf05e47dtyxllc53014pv8zd1978b3vupmnt8mvmwabhiu7&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
 ## Project Items
 - Traxxas Bandit VXL
 - Arduino Nano ESP32
-- Laptop with capabilities to run Python and Arduino (C++) Code
-- Contoller
+- Computer with capabilities to run Python and Arduino (C++) Code
+- Controller
     - I am personally using an Xbox controller
-    - Any connectable controller works.
+    - Any connectable controller to your computer works.
 
 ## Developer Notes
-- ESC | Electronic Speed Controller
+- **ESC | Electronic Speed Controller**
     - Write 1000 Microseconds to move full speed backwards
     - Write 1500 Microseconds to stop movement (Neutral Position)
     - Write 2000 Microseconds to move full speed forwards
-- Steer Servo
+- **Steer Servo**
     - 68 Degrees is fully to the right
     - 93 Degrees is fully forward
     - 118 Degrees is fully to the left
-- Power
+- **Power**
     - ESC currently routes power to:
         - Drive Motor
-        - Arduino Nano ESC32
+        - Arduino Nano ESP32
         - Drive Servo
         - See if we can power more servos on this, would be very helpful
 
