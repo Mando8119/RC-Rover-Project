@@ -6,6 +6,9 @@ This is a repository for my personal RC Rover Project. I am converting a Traxxas
 - Traxxas Bandit VXL
 - Arduino Nano ESP32
 - Laptop with capabilities to run Python and Arduino (C++) Code
+- Xbox One Controller
+    - This is just what I am using,
+    - any connectable controller works.
 
 ## Developer Notes
 - ESC | Electronic Speed Controller
