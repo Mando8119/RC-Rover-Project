@@ -15,6 +15,7 @@ def logic(controller):
     BTN_B = controller.b_pressed
     BTN_Y = controller.y_pressed
     BTN_A = controller.a_pressed
+    # BTN_SELECT and BTN_START are toggle buttons
     BTN_SELECT = controller.select_pressed
     BTN_START = controller.start_pressed
 
