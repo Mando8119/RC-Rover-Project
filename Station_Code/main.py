@@ -12,12 +12,12 @@ def update_servo_position(position):
     servo_label.config(text=f"Servo Position: {position} degrees")
 
 # Initialize the controller
-# try:
-#     controller_index = 0
-#     operator_controller = controller(controller_index)
-# except IndexError as e:
-#     print('Error: Controller Disconnected!')
-#     exit()
+try:
+    controller_index = 0
+    operator_controller = controller(controller_index)
+except IndexError as e:
+    print('Error: Controller Disconnected!')
+    exit()
 
 # Create the main window for the GUI
 try:
