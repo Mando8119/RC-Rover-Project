@@ -12,12 +12,12 @@ def update_servo_position(position):
     servo_label.config(text=f"Servo Position: {position} degrees")
 
 # Initialize the controller
-try:
-    controller_index = 0
-    operator_controller = controller(controller_index)
-except IndexError as e:
-    print('Error: Controller Disconnected!')
-    exit()
+# try:
+#     controller_index = 0
+#     operator_controller = controller(controller_index)
+# except IndexError as e:
+#     print('Error: Controller Disconnected!')
+#     exit()
 
 # Create the main window for the GUI
 try:
@@ -25,6 +25,9 @@ try:
     window.title("RC Rover GUI")
     window.geometry("500x500")
     window.configure(bg="black")
+
+    title_label = tk.Label(window, text="RC Rover GUI", bg="black", fg="purple", font=("Arial", 32))
+    title_label.pack()
 
     # Create labels for displaying the speed and servo position
     speed_label = tk.Label(window, text="Speed: 0 km/h", bg="black", fg="white")
