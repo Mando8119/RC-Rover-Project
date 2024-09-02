@@ -40,6 +40,7 @@ This is a repository for my personal RC Rover Project. I am converting a Traxxas
 - [ ] Create PCB design
 - [ ] 3d model mounting plate for electronics and Arm
 - [ ] Name our Rover!
+- [ ] Driver oriented steering?!
 - [ ] Create branches to begin testing autonomous driving and arm movement
 
 ## Finished Tasks
