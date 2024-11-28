@@ -18,7 +18,6 @@ try:
 except IndexError as e:
     print('Error: Controller Disconnected!')
     exit()
-
 # Create the main window for the GUI
 try:
     window = tk.Tk()
